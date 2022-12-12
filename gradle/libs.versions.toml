@@ -1,0 +1,24 @@
+[versions]
+androidGradlePlugin = "7.2.2"
+androidx-appcompat = "1.5.0"
+androidx-corektx = "1.8.0"
+# @keep
+compileSdk = "33"
+compose = "1.2.1"
+# @pin When updating to AGP 7.3.0-beta03 and up we can update this https://developer.android.com/studio/write/java8-support#library-desugaring-versions
+kotlin = "1.7.10"
+material = "1.7.0-beta01"
+# @keep
+minSdk = "23"
+minSdkTv = "21"
+# @keep
+targetSdk = "33"
+
+[libraries]
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-corektx" }
+google-android-material = { module = "com.google.android.material:material", version.ref = "material" }
